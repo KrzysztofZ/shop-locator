@@ -25,7 +25,7 @@ public class ShopDetailsHolderTest {
                 .postcode(postcode)
                 .longitude(longitude)
                 .latitude(latitude)
-                .createShopDetails();
+                .build();
 
         IShopDetailsHolder holder = new ShopDetailsHolder();
         holder.addShop(shopDetails);

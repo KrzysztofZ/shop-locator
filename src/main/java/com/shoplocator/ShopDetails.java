@@ -65,7 +65,7 @@ public class ShopDetails {
             return this;
         }
 
-        public ShopDetails createShopDetails() {
+        public ShopDetails build() {
             return new ShopDetails(shopName, addressNumber, postcode, longitude, latitude);
         }
     }
