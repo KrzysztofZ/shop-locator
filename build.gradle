@@ -27,8 +27,9 @@ repositories {
 
 
 dependencies {
+	compile 'com.google.maps:google-maps-services:(insert latest version)'
 	compile('org.springframework.boot:spring-boot-starter-jersey')
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 
