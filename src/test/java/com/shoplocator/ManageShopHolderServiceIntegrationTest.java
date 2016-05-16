@@ -22,13 +22,13 @@ public class ManageShopHolderServiceIntegrationTest {
 
     @Test
     public void whenAddingNewShopThenShopDetailsHolderShouldBeUpdated() throws Exception {
+
+        // GIVEN
         final String shopName = "Name 1";
         final String addressNumber = "22";
         final String postcode = "NW107HB";
         final float longitude = -0.2884105f;
         final float latitude = 51.5304814f;
-
-        // GIVEN
         ShopVO shop = new ShopVO.Builder()
                         .shopName(shopName)
                         .addressNumber(addressNumber)
