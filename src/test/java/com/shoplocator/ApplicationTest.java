@@ -1,5 +1,6 @@
 package com.shoplocator;
 
+import com.google.maps.GeoApiContext;
 import org.springframework.context.annotation.*;
 
 /**
@@ -11,4 +12,10 @@ public class ApplicationTest {
 
     @Bean(name = "shopDetailsHolder")
     public IShopDetailsHolder shopDetailsHolder() { return new ShopDetailsHolder(); }
+
+    @Bean
+    public GeoApiContext context() { return new GeoApiContext().setApiKey("AIzaSyD3-Vt0v46dxOnuRklzhZULfjq_6WhmZs8"); }
+
+    @Bean
+    public ILocationAPI locationAPI() { return new LongLatLookupService();}
 }
