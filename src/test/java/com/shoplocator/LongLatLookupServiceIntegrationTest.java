@@ -31,7 +31,7 @@ public class LongLatLookupServiceIntegrationTest {
         Double[] result = locationAPI.postcodeGeocode(addressNumber, postcode);
 
         // THEN
-        assertEquals(51.5304814d, result[0], EPSILON);
         assertEquals(-0.2884105d, result[0], EPSILON);
+        assertEquals(51.5304814d, result[1], EPSILON);
     }
 }
