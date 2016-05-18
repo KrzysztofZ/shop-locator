@@ -18,8 +18,10 @@ public class LongLatLookupService implements ILocationAPI {
         String address = addressNumber + "+" + postcode;
         try {
             GeocodingResult[] results = GeocodingApi.newRequest(context).address(address).await();
-            lngtLat[0] = results[0].geometry.location.lng;
-            lngtLat[1] = results[0].geometry.location.lat;
+            if(results.length != 0) {
+                lngtLat[0] = results[0].geometry.location.lng;
+                lngtLat[1] = results[0].geometry.location.lat;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
