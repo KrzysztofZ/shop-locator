@@ -1,5 +1,7 @@
-package com.shoplocator;
+package com.shoplocator.store;
 
+import com.shoplocator.beans.ShopDetails;
+import com.shoplocator.store.*;
 import org.junit.Test;
 
 import java.util.List;

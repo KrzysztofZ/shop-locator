@@ -1,5 +1,7 @@
-package com.shoplocator;
+package com.shoplocator.service;
 
+import com.shoplocator.beans.ShopDetails;
+import com.shoplocator.store.IShopDetailsHolder;
 import com.shoplocator.vo.ShopVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

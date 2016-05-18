@@ -1,5 +1,6 @@
-package com.shoplocator;
+package com.shoplocator.store;
 
+import com.shoplocator.beans.ShopDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

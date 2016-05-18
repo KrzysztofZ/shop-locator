@@ -1,6 +1,8 @@
-package com.shoplocator;
+package com.shoplocator.init;
 
 import com.google.maps.GeoApiContext;
+import com.shoplocator.service.*;
+import com.shoplocator.store.*;
 import org.springframework.context.annotation.*;
 
 /**

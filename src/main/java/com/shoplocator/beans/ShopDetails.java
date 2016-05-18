@@ -1,4 +1,4 @@
-package com.shoplocator;
+package com.shoplocator.beans;
 
 /**
  * Created by krzysztof.zielinski on 16/05/2016.

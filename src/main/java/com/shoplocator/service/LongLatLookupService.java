@@ -1,4 +1,4 @@
-package com.shoplocator;
+package com.shoplocator.service;
 
 import com.google.maps.*;
 import com.google.maps.model.GeocodingResult;

@@ -1,4 +1,4 @@
-package com.shoplocator;
+package com.shoplocator.service;
 
 import com.shoplocator.vo.ShopVO;
 

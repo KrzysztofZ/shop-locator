@@ -1,7 +1,7 @@
 package com.shoplocator.vo;
 
 
-import com.shoplocator.ShopDetails;
+import com.shoplocator.beans.ShopDetails;
 
 /**
  * Created by krzysztof.zielinski on 16/05/2016.

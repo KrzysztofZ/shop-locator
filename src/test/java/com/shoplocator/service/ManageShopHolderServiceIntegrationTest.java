@@ -1,5 +1,6 @@
-package com.shoplocator;
+package com.shoplocator.service;
 
+import com.shoplocator.init.ApplicationTest;
 import com.shoplocator.vo.ShopVO;
 import org.junit.*;
 import org.junit.runner.RunWith;

@@ -1,4 +1,6 @@
-package com.shoplocator;
+package com.shoplocator.store;
+
+import com.shoplocator.beans.ShopDetails;
 
 import java.util.List;
 
