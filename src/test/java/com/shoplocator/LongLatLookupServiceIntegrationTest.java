@@ -34,4 +34,19 @@ public class LongLatLookupServiceIntegrationTest {
         assertEquals(-0.2884105d, result[0], EPSILON);
         assertEquals(51.5304814d, result[1], EPSILON);
     }
+
+    @Test
+    public void whenNotProvidingNumberThenAPIReturnsLongLat() throws Exception {
+
+        // GIVEN
+        final String addressNumber = "";
+        final String postcode = "NW107HB";
+
+        // WHEN
+        Double[] result = locationAPI.postcodeGeocode(addressNumber, postcode);
+
+        // THEN
+        assertEquals(-0.2884105d, result[0], EPSILON);
+        assertEquals(51.5304814d, result[1], EPSILON);
+    }
 }
