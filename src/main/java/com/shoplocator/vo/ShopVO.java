@@ -3,9 +3,9 @@ package com.shoplocator.vo;
 
 import com.shoplocator.beans.ShopDetails;
 
-/**
- * Created by krzysztof.zielinski on 16/05/2016.
- */
+import javax.xml.bind.annotation.*;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ShopVO {
     private String shopName;
     private ShopAddress shopAddress;
@@ -85,8 +85,11 @@ public class ShopVO {
     }
 
     public static class ShopAddress {
-        private final String number;
-        private final String postcode;
+        private String number;
+        private String postcode;
+
+        public ShopAddress() {
+        }
 
         public ShopAddress(String addressNumber, String postcode) {
             this.number = addressNumber;
