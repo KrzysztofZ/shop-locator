@@ -27,14 +27,12 @@ public class ManageShopHolderServiceIntegrationTest {
         final String shopName = "Name 1";
         final String addressNumber = "22";
         final String postcode = "NW107HB";
-        final float longitude = -0.2884105f;
-        final float latitude = 51.5304814f;
         ShopVO shop = new ShopVO.Builder()
                         .shopName(shopName)
                         .addressNumber(addressNumber)
                         .postcode(postcode)
-                        .shopLongitude(longitude)
-                        .shopLatitude(latitude)
+                        .shopLongitude(null)
+                        .shopLatitude(null)
                         .build();
 
         // WHEN

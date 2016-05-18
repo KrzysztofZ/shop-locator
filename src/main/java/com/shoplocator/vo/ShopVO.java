@@ -9,10 +9,10 @@ import com.shoplocator.ShopDetails;
 public class ShopVO {
     private String shopName;
     private ShopAddress shopAddress;
-    private Float shopLongitude;
-    private Float shopLatitude;
+    private Double shopLongitude;
+    private Double shopLatitude;
 
-    public ShopVO(String shopName, String addressNumber, String postcode, float shopLongitude, float shopLatitude) {
+    public ShopVO(String shopName, String addressNumber, String postcode, Double shopLongitude, Double shopLatitude) {
         this.shopName = shopName;
         this.shopAddress = new ShopAddress(addressNumber, postcode);
         this.shopLongitude = shopLongitude;
@@ -33,8 +33,8 @@ public class ShopVO {
         private String shopName;
         private String addressNumber;
         private String postcode;
-        private float shopLongitude;
-        private float shopLatitude;
+        private Double shopLongitude;
+        private Double shopLatitude;
 
         public Builder shopName(String shopName) {
             this.shopName = shopName;
@@ -51,12 +51,12 @@ public class ShopVO {
             return this;
         }
 
-        public Builder shopLongitude(float longitude) {
+        public Builder shopLongitude(Double longitude) {
             this.shopLongitude = longitude;
             return this;
         }
 
-        public Builder shopLatitude(float latitude) {
+        public Builder shopLatitude(Double latitude) {
             this.shopLatitude = latitude;
             return this;
         }

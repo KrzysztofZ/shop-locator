@@ -16,8 +16,8 @@ public class ShopDetailsHolderTest {
         final String shopName = "Name 1";
         final String addressNumber = "22";
         final String postcode = "NW107HB";
-        final float longitude = -0.2884105f;
-        final float latitude = 51.5304814f;
+        final Double longitude = -0.2884105d;
+        final Double latitude = 51.5304814d;
 
         ShopDetails shopDetails = new ShopDetails.Builder()
                 .shopName(shopName)

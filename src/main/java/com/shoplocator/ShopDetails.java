@@ -7,10 +7,10 @@ public class ShopDetails {
 
     private String shopName;
     private ShopAddress shopAddress;
-    private float shopLongitude;
-    private float shopLatitude;
+    private Double shopLongitude;
+    private Double shopLatitude;
 
-    public ShopDetails(String shopName, String addressNumber, String postcode, float longitude, float latitude) {
+    public ShopDetails(String shopName, String addressNumber, String postcode, Double longitude, Double latitude) {
         this.shopName = shopName;
         this.shopAddress = new ShopAddress(addressNumber, postcode);
         this.shopLongitude = longitude;
@@ -25,11 +25,11 @@ public class ShopDetails {
         return shopAddress;
     }
 
-    public float getShopLongitude() {
+    public Double getShopLongitude() {
         return shopLongitude;
     }
 
-    public float getShopLatitude() {
+    public Double getShopLatitude() {
         return shopLatitude;
     }
 
@@ -37,8 +37,8 @@ public class ShopDetails {
         private String shopName;
         private String addressNumber;
         private String postcode;
-        private float longitude;
-        private float latitude;
+        private Double longitude;
+        private Double latitude;
 
         public Builder shopName(String shopName) {
             this.shopName = shopName;
@@ -55,12 +55,12 @@ public class ShopDetails {
             return this;
         }
 
-        public Builder longitude(float longitude) {
+        public Builder longitude(Double longitude) {
             this.longitude = longitude;
             return this;
         }
 
-        public Builder latitude(float latitude) {
+        public Builder latitude(Double latitude) {
             this.latitude = latitude;
             return this;
         }
