@@ -3,11 +3,14 @@ package com.shoplocator.vo;
 
 import com.shoplocator.beans.ShopDetails;
 
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ShopVO {
+    @NotNull
     private String shopName;
+    @NotNull
     private ShopAddress shopAddress;
     private Double shopLongitude;
     private Double shopLatitude;

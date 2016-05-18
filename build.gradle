@@ -29,6 +29,7 @@ repositories {
 dependencies {
 	compile('com.google.maps:google-maps-services:0.1.12')
 	compile('org.springframework.boot:spring-boot-starter-jersey')
+	compile('org.glassfish.jersey.ext:jersey-bean-validation:2.22.2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
