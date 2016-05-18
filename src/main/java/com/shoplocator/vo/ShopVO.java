@@ -26,7 +26,25 @@ public class ShopVO {
                 .shopName(this.shopName)
                 .addressNumber(this.shopAddress.getNumber())
                 .postcode(this.shopAddress.getPostcode())
+                .longitude(this.shopLongitude)
+                .latitude(this.shopLatitude)
                 .build();
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public ShopAddress getShopAddress() {
+        return shopAddress;
+    }
+
+    public Double getShopLongitude() {
+        return shopLongitude;
+    }
+
+    public Double getShopLatitude() {
+        return shopLatitude;
     }
 
     public static class Builder {

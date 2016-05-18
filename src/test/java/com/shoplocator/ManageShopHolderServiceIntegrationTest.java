@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -27,6 +28,8 @@ public class ManageShopHolderServiceIntegrationTest {
         final String shopName = "Name 1";
         final String addressNumber = "22";
         final String postcode = "NW107HB";
+        final Double longitude = -0.2884105d;
+        final Double latitude = 51.5304814d;
         ShopVO shop = new ShopVO.Builder()
                         .shopName(shopName)
                         .addressNumber(addressNumber)
@@ -39,6 +42,9 @@ public class ManageShopHolderServiceIntegrationTest {
         manageShopService.addShop(shop);
 
         // THEN
-        assertNotNull(manageShopService.findShop(shopName));
+        ShopVO result = manageShopService.findShop(shopName);
+        assertNotNull(result);
+        assertEquals(longitude, result.getShopLongitude(),5);
+        assertEquals(latitude, result.getShopLatitude(),5);
     }
 }

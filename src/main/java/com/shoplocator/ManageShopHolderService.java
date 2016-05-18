@@ -13,9 +13,24 @@ public class ManageShopHolderService implements IManageShopHolderService {
     @Autowired
     private IShopDetailsHolder shopDetailsHolder;
 
+    @Autowired
+    private ILocationAPI locationAPI;
+
     @Override
     public void addShop(ShopVO shop) {
+        Double[] lngLat = locationAPI.postcodeGeocode(shop.getShopAddress().getNumber(), shop.getShopAddress().getPostcode());
+        shop = updateLngLat(shop, lngLat);
         shopDetailsHolder.addShop(shop.convertToEntity());
+    }
+
+    private ShopVO updateLngLat(ShopVO shop, Double[] lngLat) {
+        return new ShopVO.Builder()
+                .shopName(shop.getShopName())
+                .addressNumber(shop.getShopAddress().getNumber())
+                .postcode(shop.getShopAddress().getPostcode())
+                .shopLongitude(lngLat[0])
+                .shopLatitude(lngLat[1])
+                .build();
     }
 
     @Override
